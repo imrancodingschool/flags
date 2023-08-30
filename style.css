@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Borel&family=Merriweather:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #080808;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+      background-image: url('img/imranalyimg-PhotoRoom.png-PhotoRoom.png');  
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.conatiner{
+    padding: 10px 8%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+width: 160px;
+
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    
+}
+nav ul li a::after{
+
+    content:' ';
+    width: 0;
+    height: 3px;
+    background-color: rgb(202, 17, 17);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    font-family: 'Borel', cursive;
+}
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+}
+span{
+    color: purple;
+}
+
+
+/* .......................................about....................................... */
+
+.about{
+    color: wheat;
+   padding: 80px 10%;
+}
+
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 87%;
+    height: 97%;
+    border-radius: 16px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-tittle{
+    color: white;
+    font-size: 60px;
+}
+.tab-tittles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 40px;
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+
+    content:' ';
+    width: 0;
+    height: 3px;
+    background-color: rgb(206, 35, 1);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    font-family: 'Borel', cursive;
+
+    transition: 0.5s;
+}
+.tab-links.active-links::after{
+    width: 70%;
+}
+
+.tab-content ul li{
+list-style: none;
+margin: 10px 0px;
+font-family: 'Borel', cursive;
+
+}
+.tab-content ul li span{
+    color: #C519FF;
+    font-size: 21px;
+}
+.tab-content{
+display: none;
+}
+ .tab-content.active-tab{
+display: block;
+}
+
+
+
+
+/* ...............................................................services............................. */
+
+#services{
+    padding: 30px 0;
+}
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .services-list div{
+    background-color: #262626;
+    padding: 30px;
+    font-size: 13px; 
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 05s,transform 05s ;
+    font-family: 'Borel', cursive;
+
+  }
+
+  .services-list div i{
+    font-size: 70px;
+    margin-bottom: 30px;
+  }
+  .services-list div h2{
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  .services-list div a{
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 12px;
+    color: white;
+    display: inline-block;
+  }
+
+  .services-list div:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+  }
+
+  /* ................................portfolio................................... */
+
+
+  #portfolio{
+    padding: 50px 0;
+  }
+
+  .work-list{
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 50px;
+        font-family: 'Borel', cursive;
+
+      
+  }
+  .work{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  .work img{
+    border-radius: 10px;
+    display: block;
+    transition: tranform 0.5s;
+
+  }
+  .layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+  }
+  .layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .layer a{
+    margin-top: 10px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background:#fff ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .work:hover img{
+transform: scale(1.1);
+  }
+  .work:hover .layer{
+    height: 100%;
+  }
+
+  .btn{
+ display: block;
+ margin: 50px auto;
+ width: fit-content;
+ border: 1px solid #ff004f;
+ padding: 14px 50px;
+ border-radius: 6px;
+ text-decoration: none;
+ color: #fff;
+  }
+
+
+  /* ................................................... */
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+margin-top:30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: tranform 0.5s;
+
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 18px;
+    border-radius: 7px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 700;
+    margin-top: 20px;
+
+}
+
+/* ..........................css for media....................... */
+
+ */
+ .checkbtn{
+    
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+   
+}
+
+#check {
+    display: none;
+}
+.checkbtn{
+    display: none;
+}
+  
+@media (max-width:600px) {
+   
+nav{
+    display: flex;
+}
+
+
+    .checkbtn{
+        display: block;
+    }
+  nav  ul{
+        position: fixed;
+        width: 100%;
+        height: 80vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+       
+    }
+  
+    .navbar ul li{
+        display: block;
+    }
+    .navbar ul li a{
+        display: block;
+        font-size: 25px;
+        font-weight: 800;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+       
+        opacity: 1.6;
+        border: 1px solid white;
+        font-size: 27px;
+        padding: 7px;
+
+    }
+    /* .logo{
+        display: block;
+        float: left;
+    } */
+    nav ul.show{
+        left: 0;
+    }
+}
+.header-text{
+    margin-top: 100%;
+    font-size: 16px;
+    font-family: 'Borel', cursive;
+}
+.header-text h1{
+    font-size: 30px;
+}
+
+
+.sub-tittle {
+    color: white;
+    font-size: 32px;
+    text-align: center;
+
+}
+.about-col-1,.about-col-2{
+    flex-basis: 100%;
+}
+.about-col-1 img {
+    width: 100%;
+    height: 95%;
+    border-radius: 40%;
+}
+
+.para{
+    font-size: 10px;
+    font-family: 'Borel', cursive;
+    color: #ff004f;
+
+
+}
+.about-col-1{
+    margin-bottom: 35px;
+}
+.contact-left,.contact-right{
+    flex-basis: 100%;
+}
